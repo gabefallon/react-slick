@@ -118,6 +118,9 @@ var helpers = {
     } else {
       currentSlide = targetSlide;
     }
+    if (this.props.slideChanged) {
+      this.props.slideChanged(currentSlide);
+    }
 
     targetLeft = getTrackLeft(assign({
       slideIndex: targetSlide,
